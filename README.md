@@ -43,7 +43,9 @@ Your app is ready to be deployed!
 
 ### Research & Planning Log 
 11/27/24
-- component tree?
+- query petfinder api-check
+- hierarchy of needs?
+- add component tree?
 - mobile friendly: possible mobile overlay for presentation??
 ## Known Bugs
 
