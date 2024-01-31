@@ -46,7 +46,9 @@ Your app is ready to be deployed!
 - query petfinder api-check
 - hierarchy of needs?
 - add component tree?
-- mobile friendly: possible mobile overlay for presentation??
+11/30/24
+- Capacitorjs as native runtime environment - mobile friendly: possible mobile overlay for presentation or native app.
+-
 ## Known Bugs
 
 * If it crashes clone the repository and start again
