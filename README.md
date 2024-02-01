@@ -42,13 +42,15 @@ Your app is ready to be deployed!
 
 
 ### Research & Planning Log 
-11/27/24
+1/27/24
 - query petfinder api-check
 - hierarchy of needs?
 - add component tree?
-11/30/24
-- Capacitorjs as native runtime environment - mobile friendly: possible mobile overlay for presentation or native app.
--
+1/30/24
+- sr developer friend recommended Capacitorjs as native runtime environment - mobile friendly: possible mobile overlay for presentation or native app.
+ 1/31/24
+ -
+ - starting in react and adding branches for CapacitorJs, react native?
 ## Known Bugs
 
 * If it crashes clone the repository and start again
@@ -57,3 +59,6 @@ Your app is ready to be deployed!
 ## licensing info 
 *Copyright (c) 1/27/24 Estevan Lopez
 *MIT license 
+
+
+---capstone advice
