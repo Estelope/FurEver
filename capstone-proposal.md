@@ -21,7 +21,6 @@ If you finish developing the minimum viable product (MVP) with time to spare, wh
 - Other features such as filter tabs, search page, additonal resources page.
 
 What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
-- I need advice on the mobile app display! 
 - C# / .NET
 -
 - waiting on key from RescueGroups for their API data to see if its parsible 

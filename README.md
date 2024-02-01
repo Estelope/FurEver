@@ -1,7 +1,7 @@
 # Furever
 
 ## Description
-This app will introduce users to their dream pets and facilitate their connection to new homes. 
+This app will aim to streamline the connection between shelters with animals up for adoption and potential pet owners.It will introduce users to their dream pets and facilitate their connection to new homes with a friendly and familiar ui. 
 
 ## Technologies Used
 
@@ -49,8 +49,10 @@ Your app is ready to be deployed!
 1/30/24
 - sr developer friend recommended Capacitorjs as native runtime environment - mobile friendly: possible mobile overlay for presentation or native app.
  1/31/24
- -
- - starting in react and adding branches for CapacitorJs, react native?
+ - starting in react w/hooks and adding branches for CapacitorJs, react native?
+ -researched and read about mobile technologies for integrating app.  Capacitor seems to allow to keep everything unchanged after adding wiht light mods. React Native requires us to create all UI components from scratch, but we can keep redux/logic. 
+ -ai chatbot implimentation branch further down road? 
+
 ## Known Bugs
 
 * If it crashes clone the repository and start again
@@ -59,6 +61,3 @@ Your app is ready to be deployed!
 ## licensing info 
 *Copyright (c) 1/27/24 Estevan Lopez
 *MIT license 
-
-
----capstone advice
