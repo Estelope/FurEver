@@ -24,3 +24,54 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 - C# / .NET
 -
 - waiting on key from RescueGroups for their API data to see if its parsible 
+
+
+
+
+
+
+
+login/prompt page: login fuctnionality not part of mvp 
+
+
+location search bar:
+
+
+petCard:
+
+Displays animal information and image(s).
+Swipeable left or right to indicate interest or pass.
+       
+CardStack:
+
+Manages the stack of UserCards.
+Animations for card swiping.
+
+Profile:
+
+Displays user's profile information.
+Edit profile functionality.
+
+Settings:
+
+Allows users to configure app settings.
+Preferences, account settings, etc.
+
+Navbar/Header:
+
+Navigation links to different sections of the app.
+Logo and navigation buttons.
+
+Chat:not part of mvp
+
+Manages conversations between matched users.
+Sending and receiving messages.
+
+Notification:not part of mvp
+
+Alerts for new matches, messages, or other notifications.
+
+Footer / Interaction buttons:
+
+Loading screen? : not part of mvp
+

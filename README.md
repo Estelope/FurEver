@@ -52,6 +52,9 @@ Your app is ready to be deployed!
  - starting in react w/hooks and adding branches for CapacitorJs, react native?
  -researched and read about mobile technologies for integrating app.  Capacitor seems to allow to keep everything unchanged after adding wiht light mods. React Native requires us to create all UI components from scratch, but we can keep redux/logic. 
  -ai chatbot implimentation branch further down road? 
+ 2/03/24 -2/04/24
+ -practice with react components + first component tree + md
+
 
 ## Known Bugs
 
