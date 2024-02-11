@@ -54,6 +54,8 @@ Your app is ready to be deployed!
  -ai chatbot implimentation branch further down road? 
  2/03/24 -2/04/24
  -practice with react components + first component tree + md
+ 2/07/24
+ -animation and ui research. found solid sources for react ui components online 
 
 
 ## Known Bugs

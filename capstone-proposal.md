@@ -75,3 +75,4 @@ Footer / Interaction buttons:
 
 Loading screen? : not part of mvp
 
+FAQ: not part of mvp
