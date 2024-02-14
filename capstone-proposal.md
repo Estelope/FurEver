@@ -76,3 +76,5 @@ Footer / Interaction buttons:
 Loading screen? : not part of mvp
 
 FAQ: not part of mvp
+business logic tests:??
+react spring library for animations 

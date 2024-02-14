@@ -56,6 +56,9 @@ Your app is ready to be deployed!
  -practice with react components + first component tree + md
  2/07/24
  -animation and ui research. found solid sources for react ui components online 
+ 2/10/24
+ - addtional animation research
+ - ui boilerplate 
 
 
 ## Known Bugs
