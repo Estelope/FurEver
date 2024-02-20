@@ -59,8 +59,9 @@ Your app is ready to be deployed!
  2/10/24
  - addtional animation research
  - ui boilerplate 
-
-
+ 2/12- 2/18
+ -nailing down libraries and component structuring - spring for swipe animation and component css inline styling
+ 
 ## Known Bugs
 
 * If it crashes clone the repository and start again
