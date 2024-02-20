@@ -4,7 +4,7 @@ Project's Purpose or Goal: Connect users to their new pets with a familiar ui.
 
 List the absolute minimum features the project requires to meet this purpose or goal:
 
-- frontend ui preferably smooth that is presentable and querys  at least one API.
+- frontend ui preferably smooth that is presentable and querys a TBD API.
 -Integration with reliable API that has updated animal adoption listings. Petfinder for devs is best canidate atm but considering others if not multiple at once. Has good documention!
 
 What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
@@ -17,7 +17,7 @@ What tools, frameworks, libraries, APIs, modules and/or other resources (whateve
 
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 - -Possible C# /.NET framework for API -Considering making a C# API for the backend just as a proof of concept
-- Display for mobile app and presentation, similar to one an alumn demoed. 
+- Display for mobile app and presentation
 - Other features such as filter tabs, search page, additonal resources page.
 
 What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
@@ -37,14 +37,11 @@ login/prompt page: login fuctnionality not part of mvp
 location search bar:
 
 
-petCard:
+petCard: or api data pagination
 
 Displays animal information and image(s).
 Swipeable left or right to indicate interest or pass.
-       
-CardStack:
-
-Manages the stack of UserCards.
+Manages the stack of UserCards. (store control data in higher component??)
 Animations for card swiping.
 
 Profile:
@@ -67,10 +64,8 @@ Chat:not part of mvp
 Manages conversations between matched users.
 Sending and receiving messages.
 
-Notification:not part of mvp
-
-Alerts for new matches, messages, or other notifications.
-
+Notification/pop up "dream pet" questionaire that weights api resultd:not part of mvp
+Alerts for new matches, messages, or other notifications. 
 Footer / Interaction buttons:
 
 Loading screen? : not part of mvp

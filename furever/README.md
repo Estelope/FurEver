@@ -44,7 +44,6 @@ Your app is ready to be deployed!
 ### Research & Planning Log 
 1/27/24
 - query petfinder api-check
-- hierarchy of needs?
 - add component tree?
 1/30/24
 - sr developer friend recommended Capacitorjs as native runtime environment - mobile friendly: possible mobile overlay for presentation or native app.
@@ -60,7 +59,7 @@ Your app is ready to be deployed!
  - addtional animation research
  - ui boilerplate 
  2/12- 2/18
- -nailing down libraries and component structuring - spring for swipe animation and component css inline styling
+ -nailing down libraries and component structuring - spring library for swipe animation and component css inline styling- re render dom on every swipe? . Caching can reduce redundant API calls, and pagination can help manage large datasets more efficiently.
  
 ## Known Bugs
 
