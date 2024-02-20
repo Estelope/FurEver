@@ -60,6 +60,7 @@ Your app is ready to be deployed!
  - ui boilerplate 
  2/12- 2/18
  -nailing down libraries and component structuring - spring library for swipe animation and component css inline styling- re render dom on every swipe? . Caching can reduce redundant API calls, and pagination can help manage large datasets more efficiently.
+ - avoid bottom up approach focus on higher up components in hierarchy
  
 ## Known Bugs
 
