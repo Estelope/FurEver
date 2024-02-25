@@ -42,7 +42,7 @@ petCard: or api data pagination
 Displays animal information and image(s).
 Swipeable left or right to indicate interest or pass.
 Manages the stack of UserCards. (store control data in higher component??)
-Animations for card swiping.
+Animations for card swiping from keyframes or spring libraries 
 
 Profile:
 
@@ -77,6 +77,6 @@ react spring library for animations
 Tests for state creation at minimum
 
 
-gpt api for dynamic responses?
+GPT api for dynamic responses about your pet or relevant info
 
 firebase authentication
