@@ -18,7 +18,7 @@ What tools, frameworks, libraries, APIs, modules and/or other resources (whateve
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 - -Possible C# /.NET framework for API -Considering making a C# API for the backend just as a proof of concept
 - Display for mobile app and presentation
-- Other features such as filter tabs, search page, additonal resources page.
+- Other features such as filter tabs, search page, additonal resources page, popups, state tests.
 
 What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
 - C# / .NET
@@ -73,3 +73,10 @@ Loading screen? : not part of mvp
 FAQ: not part of mvp
 business logic tests:??
 react spring library for animations 
+
+Tests for state creation at minimum
+
+
+gpt api for dynamic responses?
+
+firebase authentication
