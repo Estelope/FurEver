@@ -1,5 +1,5 @@
 import './App.css';
-import Header from "./Header";
+import Header from "./Heading/Header";
 import SignIn from "./SignIn";
 import SlideControl from "./SlideControl"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
