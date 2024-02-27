@@ -12,7 +12,7 @@ body {
   background-color: black;
   --font-base:  sans-serif;
   --color-text: rgb(52, 90, 148);
-  --color-highlight: #d42525;
+  --color-highlight: #df4848e4;
   --color-dark: rgb(52, 90, 148);
   --color-grey: #F3F3F3;
 }

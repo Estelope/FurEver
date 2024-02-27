@@ -9,7 +9,7 @@ import data from '../../constants/data';
 const NavBar = () => {
   return (
 
-         <Navbar collapseOnSelect expand="lg" bg="ligth" variant="ligth">
+         <Navbar collapseOnSelect expand="lg" bg="ligth" variant="ligth" class="navbar navbar-fixed-top">
               <Container>
                   <Navbar.Brand href="#home"> <img src={images.fureverdogcat} alt="logo" /></Navbar.Brand>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
