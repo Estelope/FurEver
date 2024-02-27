@@ -7,8 +7,9 @@ import './Heading.css'
 function Header() {
   return (
     <React.Fragment>
-      <h1>Furever</h1>
+      <div className="heading" >
       <img src={images.furever} alt="logo" />
+      </div>
     </React.Fragment>
   );
 }

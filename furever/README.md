@@ -6,11 +6,13 @@ This app will aim to streamline the connection between shelters with animals up 
 ## Technologies Used
 
 * Node Package Manager 
+* webpack
 * Markdown
 * Github
 * JavaScript, HTML/CSS
 * React
 * React Router library
+* Bootstrap
 
 
 

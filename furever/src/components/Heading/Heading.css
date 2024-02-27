@@ -1,0 +1,15 @@
+.heading {
+  display: flex;
+  object-fit: contain;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: black;
+   
+}
+
+img{
+  max-width: 18%;
+  max-height: 100%
+  }
+  

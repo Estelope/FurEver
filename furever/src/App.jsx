@@ -1,7 +1,7 @@
-import './App.css';
-import Header from "./Heading/Header";
-import SignIn from "./SignIn";
-import SlideControl from "./SlideControl"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/Heading/Header";
+import SignIn from "./components/SignIn";
+import NavBar from './components/NavBar/NavBar'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <NavBar />
       <Routes>
       </Routes>
     </Router>
