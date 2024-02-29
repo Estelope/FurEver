@@ -9,6 +9,7 @@ This app will aim to streamline the connection between shelters with animals up 
 * webpack
 * Jest
 * ESlint
+* dotenv
 * Markdown
 * Github
 * JavaScript, HTML/CSS
