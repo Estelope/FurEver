@@ -7,6 +7,8 @@ This app will aim to streamline the connection between shelters with animals up 
 
 * Node Package Manager 
 * webpack
+* Jest
+* ESlint
 * Markdown
 * Github
 * JavaScript, HTML/CSS
