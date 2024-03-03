@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 footer {
   background: var(--color-dark);
   margin-top: 3rem;
@@ -64,7 +68,7 @@ ul.info-contact {
 }
 
 
-footer .btn-positivus{
+footer .btn{
   background: var(--color-highlight);
   color:var(--color-dark);
   font-size: 16px;

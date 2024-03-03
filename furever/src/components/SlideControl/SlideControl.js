@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './SlideControl.css';
 
 
 const SlideControl = () => {
@@ -6,7 +7,7 @@ const SlideControl = () => {
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(true);  //? maybe
   const [error, setError] = useState(null); //? maybe
-//paginate each card?
+  //paginate each card?
   useEffect(() => {
     const getAccessToken = async () => {
       const client_id = process.env.REACT_APP_API_KEY;
@@ -59,14 +60,31 @@ const SlideControl = () => {
   return (
     <div>
       {error && <p>Error: {error}</p>}
-      {apiData && (
-        <div>
-          {} //data
-          <pre>{JSON.stringify(apiData, null, 2)}</pre>
+      {apiData && apiData.animals && apiData.animals.length > 0 && (
+        <div className="animal-details">
+          {apiData.animals[0].photos[0] && (
+            <img
+              src={
+                (apiData.animals[0].photos[0].medium &&
+                  apiData.animals[0].photos[0].medium) ||
+                (apiData.animals[0].photos[0].large &&
+                  apiData.animals[0].photos[0].large) ||
+                (apiData.animals[0].photos[0].small &&
+                  apiData.animals[0].photos[0].small)
+              }
+              alt={apiData.animals[0].name}
+            />
+          )}
+          <h2>{apiData.animals[0].name}</h2>
+          <p>Type: {apiData.animals[0].type}</p>
+          <p>Breed: {apiData.animals[0].breeds.primary}</p>
+          <p>Age: {apiData.animals[0].age}</p>
+          <p>Description: {apiData.animals[0].description}</p>
         </div>
       )}
     </div>
   );
-  };
+};
 
-  export default SlideControl;
+
+export default SlideControl;

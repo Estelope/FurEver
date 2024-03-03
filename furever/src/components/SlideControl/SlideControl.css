@@ -1,0 +1,27 @@
+.animal-details {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.animal-details img {
+  object-position: center;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.animal-details h2 {
+  margin-top: 10px;
+}
+
+.animal-details p {
+  margin-bottom: 5px;
+}
