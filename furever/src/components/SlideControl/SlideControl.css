@@ -1,21 +1,39 @@
+.animal-details-wrapper {
+  width: 100%; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
 .animal-details {
-  border: 1px solid #ccc;
+  border: 5px solid var(--color-dark);
+  background-color: var(--color-dark);
   margin-bottom: 20px;
   padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   margin: 0;
   padding: 0;
-
+  align-items: center; 
+  text-align: center;  
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
 }
 
 .animal-details img {
   object-position: center;
-  width: 100%;
-  max-height: 300px;
   object-fit: cover;
+  width: 100%;
+  max-height: 700px;
+  max-width: 100%;
+  height: auto;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  
 }
 
 .animal-details h2 {

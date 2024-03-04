@@ -61,7 +61,10 @@ const SlideControl = () => {
     <div>
       {error && <p>Error: {error}</p>}
       {apiData && apiData.animals && apiData.animals.length > 0 && (
+        <div className="animal-details-wrapper">
         <div className="animal-details">
+          <h2>{apiData.animals[0].name}</h2>
+
           {apiData.animals[0].photos[0] && (
             <img
               src={
@@ -75,11 +78,12 @@ const SlideControl = () => {
               alt={apiData.animals[0].name}
             />
           )}
-          <h2>{apiData.animals[0].name}</h2>
           <p>Type: {apiData.animals[0].type}</p>
           <p>Breed: {apiData.animals[0].breeds.primary}</p>
           <p>Age: {apiData.animals[0].age}</p>
-          <p>Description: {apiData.animals[0].description}</p>
+          {/*<p>Description: {apiData.animals[0].description}</p>    move to flippable side with other pet data and contact info */}
+        
+        </div>
         </div>
       )}
     </div>
