@@ -19,7 +19,7 @@
 }
 
 .nav-link:hover {
-  background: var(--color-highlight);
+  background: url('../../assets/symboloflove.png') center/contain no-repeat;
   border-radius: 5px;
   color: var(--color-text);
 }
