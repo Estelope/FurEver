@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './SlideControl.css';
 import SwipeableViews from "react-swipeable-views-react-18-fix";
-
+import images from '../../constants/images'
 
 
 const SlideControl = () => {
   const [accessToken, setAccessToken] = useState(null);
   const [apiData, setApiData] = useState(null);
   const [index, setIndex] = useState(0);
-  const [animate, setAnimate] = useState(false);
   const [matches, setMatches] = useState([]);
   const [error, setError] = useState(null); //? maybe
+  const [forceUpdate, setForceUpdate] = useState(false);
+  const [flippedIndex, setFlippedIndex] = useState(null);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const buttonClickedRef = useRef(buttonClicked);
+  buttonClickedRef.current = buttonClicked;
 
   const getAccessToken = async () => {
     const client_id = process.env.REACT_APP_API_KEY;
@@ -35,7 +40,7 @@ const SlideControl = () => {
     return data.access_token;
   };
 
-  useEffect(() => {
+  useEffect((forceUpdate) => {
     const fetchInitialData = async () => {
       const token = await getAccessToken();
 
@@ -61,7 +66,7 @@ const SlideControl = () => {
     };
 
     fetchInitialData();
-  }, []);
+  }, [forceUpdate]);
 
   const refreshApiData = async () => {
     try {
@@ -78,9 +83,11 @@ const SlideControl = () => {
       });
 
       const responseData = await response.json();
+      console.log('Refreshed API Data:', responseData);
 
       setApiData(responseData);
       setIndex(0);
+      setForceUpdate((prev) => !prev);
     } catch (error) {
       console.error('Error refreshing API data:', error);
     }
@@ -88,7 +95,8 @@ const SlideControl = () => {
 
   const handleSwipe = (index) => {
     setIndex(index);
-    setAnimate(true);
+    console.log(apiData)
+
   };
 
   const handleSwipeRight = () => {
@@ -97,46 +105,90 @@ const SlideControl = () => {
     setIndex((prevIndex) => prevIndex + 1);
   };
 
-  const handleSwipeLeft = () => {
-  refreshApiData();
-  setIndex((prevIndex) => prevIndex + 1);
-  }
+  const handleSwipeLeft = async () => {
+    await refreshApiData();
+    setIndex((prevIndex) => (prevIndex + 1) % apiData.animals.length);
+  };
+
+  const handleCardClick = (idx) => {
+    if (!buttonClickedRef.current) {
+      setFlippedIndex(flippedIndex === idx ? null : idx);
+    }
+    setButtonClicked(false); 
+  };
+
+  const getSentence = (text) => {
+    if (text && typeof text === 'string') {
+      return text.split(/(?<=[,.!?])\s+/).filter(sentence => sentence.trim() !== '' && !sentence.trim().endsWith('...'));
+    } else {
+      return [];
+    }
+  };
 
   return (
     <div>
       {error && <p>Error: {error}</p>}
       {apiData && apiData.animals && apiData.animals.length > 0 && apiData.animals[0].photos && apiData.animals[0].photos.length > 0 && (
-
         <SwipeableViews
           enableMouseEvents
           index={index}
-          onChangeIndex={handleSwipe} onSwipeRight={handleSwipeRight}
+          onChangeIndex={handleSwipe}
+          onSwipeRight={handleSwipeRight}
           onSwipeLeft={handleSwipeLeft}
         >
-          {apiData.animals.map((animal, idx) => (
-            <div className="react-swipeable-view-container">
-              <div key={idx} className={'react-swipeable-view-slide'}>
-                <div className="animal-details">
-                  <h2>{animal.name}</h2>
+          {apiData.animals
+            .filter((animal) => animal.photos && animal.photos.length > 0)
+            .map((animal, idx) => (
+              <div key={idx} className={`react-swipeable-view-container ${flippedIndex === idx ? 'flipped' : ''}`}
+                onClick={() => handleCardClick(idx)}>
+                <div className={`react-swipeable-view-slide${flippedIndex === idx ? ' flipped' : ''}`}>
+                  <div className="animal-details">
+                    <h2>{animal.name}</h2>
 
-                  {animal.photos[0] && (
-                    <img
-                      src={
-                        (animal.photos[0].medium && animal.photos[0].medium) ||
-                        (animal.photos[0].large && animal.photos[0].large) ||
-                        (animal.photos[0].small && animal.photos[0].small)
-                      }
-                      alt={animal.name}
-                    />
-                  )}
-                  <p>Type: {animal.type}</p>
-                  <p>Breed: {animal.breeds.primary}</p>
-                  <p>Age: {animal.age} </p>
-                  {/*<p>Description: {animal.description}</p>    move to flippable side with other pet data and contact info */}
+                    {animal.photos[0] && (
+                      <img
+                        src={
+                          (animal.photos[0].medium && animal.photos[0].medium) ||
+                          (animal.photos[0].large && animal.photos[0].large) ||
+                          (animal.photos[0].small && animal.photos[0].small)
+                        }
+                        alt={animal.name}
+                      />
+                    )}
+                    <p>Type: {animal.type}</p>
+                    <p>Breed: {animal.breeds.primary}</p>
+                    <p>Age: {animal.age} </p>
+                  </div>
+                  <div className="animal-details-back">
+                    <h2>{animal.name}</h2>
+                    <p> {getSentence(animal.description)}</p>
+                    <p><b>Attributes</b><br>
+                    </br> Spayed/Neutered: {animal.attributes.spayed_neutered ? 'Yes' : 'No'}<br></br>
+                      House Trained: {animal.attributes.house_trained ? 'Yes' : 'No'}<br></br>
+                      Shots current: {animal.attributes.shots_current ? 'Yes' : 'No'}<br></br>
+                      status: {animal.status}
+                    </p>
+                    <p><b>Tags</b><br></br>   {animal.tags.map((tag, index) => (
+                      <React.Fragment key={index}>
+                        {index > 0 && ', '}
+                        <b>{tag}</b>
+                      </React.Fragment>
+                    ))}</p>
+                    <p><b>Contact Info</b><br></br> email: {animal.contact.email}</p>
+                    <p> phone: {animal.contact.phone} </p>
+                    <button class="favorite-button" aria-label="Favorite"
+                    onClick={() => {
+                      setButtonClicked(true);                     
+                    }}
+                    >
+                      <img className="heart-icon" src={images.heartborder} alt="Empty Heart" />
+                      <img className="heart-icon-hover" src={images.symboloflove} alt="Filled Heart" />
+                    </button>
+
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </SwipeableViews>
       )}
     </div>

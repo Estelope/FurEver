@@ -1,19 +1,17 @@
 
 
 .animal-details {
-  border: 2px solid var(--color-dark);
   background-color: var(--color-dark);
-  margin-bottom: 20px;
   padding: 10px;
-  flex-direction: column;
-  justify-content: center;
- 
   align-items: center; 
   text-align: center;  
   border-top-right-radius: 45px;
   border-top-left-radius: 45px;
   border-bottom-right-radius: 45px;
   border-bottom-left-radius: 45px;
+  border:  solid transparent;
+  
+
 }
 
 .animal-details img {
@@ -23,10 +21,17 @@
   max-height: 700px;
   max-width: 100%;
   height: auto;
+  flex-shrink: 0;
+  margin: 20px;
+  height: calc(400px + 6vw);
+  width: calc(500px + 6vw);
+  border: calc(8px + 0.2vw) solid transparent;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
   border-bottom-right-radius: 45px;
   border-bottom-left-radius: 45px;
   border-top-right-radius: 45px;
   border-top-left-radius: 45px; 
+
 }
 
 .animal-details h2 {
@@ -35,16 +40,16 @@
 
 .animal-details p {
   margin-bottom: 5px;
+ 
 }
 
 .react-swipeable-view-container {
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 1; 
-  display: flex;
+
 }
 
 .react-swipeable-view-slide {
-  
   transition: transform 0.3s ease, opacity 0.3s ease;
   flex: 0 0 100%; 
   width: 100%; 
@@ -53,6 +58,94 @@
   justify-content: center;
   height: 100%;
   opacity: 1; 
+  backface-visibility: hidden;
+
 }
 
+.react-swipeable-view-container.flipped {
+  transform: rotateY(180deg);
+}
 
+.react-swipeable-view-slide.flipped {
+  transform: rotateY(180deg);
+}
+
+.react-swipeable-view-container.flipped .animal-details-back p {
+ 
+  transform: rotateY(180deg);
+}
+
+.react-swipeable-view-slide:not(.flipped) .animal-details-back {
+  display: none;
+}
+
+.animal-details-back {
+  background-color: var(--color-dark); 
+  padding: 10px;
+  border-radius: 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  border: solid transparent;
+  height: calc(600px + 6vw);
+  width: calc(600px + 6vw);
+  border: calc(8px + 0.2vw) solid transparent;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.animal-details-back {
+  margin-left: -31%;
+}
+
+.animal-details-back h2{
+  transform:rotateY(180deg)
+    
+  }
+
+  .favorite-button {
+    transition: transform 0.3s ease; 
+    position:relative;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .heart-icon-hover {
+    display: inline-block;
+    width: 100%;  
+    height: 100%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .favorite-button:hover .heart-icon {
+    display: none;
+  }
+  
+  .favorite-button:hover .heart-icon-hover {
+    display: inline-block;
+   
+  }
+  .heart-icon, .heart-icon-hover {
+    width: 400px;  
+    height: 100px;
+  }
+
+  .favorite-button:hover img.heart-icon {
+    transform: scale(0.8) 
+   
+  }
+  
+  .favorite-button:hover img.heart-icon-hover {
+    transform: scale(1.2)  
+  }
+  .favorite-button img {
+    transition: transform 0.3s ease;
+  
+  }
