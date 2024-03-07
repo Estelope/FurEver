@@ -4,7 +4,7 @@ import SwipeableViews from "react-swipeable-views-react-18-fix";
 import images from '../../constants/images'
 
 
-const SlideControl = () => {
+const SlideControl = ({animalType, location}) => {
   const [accessToken, setAccessToken] = useState(null);
   const [apiData, setApiData] = useState(null);
   const [index, setIndex] = useState(0);
@@ -13,6 +13,7 @@ const SlideControl = () => {
   const [forceUpdate, setForceUpdate] = useState(false);
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [buttonClicked, setButtonClicked] = useState(false);
+  const [matchedAnimals, setMatchedAnimals] = useState([]);
 
   const buttonClickedRef = useRef(buttonClicked);
   buttonClickedRef.current = buttonClicked;
@@ -40,7 +41,8 @@ const SlideControl = () => {
     return data.access_token;
   };
 
-  useEffect((forceUpdate) => {
+  useEffect(() => {
+
     const fetchInitialData = async () => {
       const token = await getAccessToken();
 
@@ -52,7 +54,7 @@ const SlideControl = () => {
       setAccessToken(token);
 
       const apiEndpoint = 'https://api.petfinder.com/v2/animals';
-      const apiUrl = `${apiEndpoint}`;
+      const apiUrl = `${apiEndpoint}?type=${animalType}&location=${location}`;
 
       const response = await fetch(apiUrl, {
         headers: {
@@ -61,12 +63,11 @@ const SlideControl = () => {
       });
 
       const responseData = await response.json();
-
       setApiData(responseData);
     };
 
     fetchInitialData();
-  }, [forceUpdate]);
+  }, [, animalType, location]);
 
   const refreshApiData = async () => {
     try {
@@ -74,7 +75,7 @@ const SlideControl = () => {
       setAccessToken(token);
 
       const apiEndpoint = 'https://api.petfinder.com/v2/animals';
-      const apiUrl = `${apiEndpoint}`;
+      const apiUrl = `${apiEndpoint}?type=${animalType}&location=${location}`;
 
       const response = await fetch(apiUrl, {
         headers: {
@@ -106,8 +107,8 @@ const SlideControl = () => {
   };
 
   const handleSwipeLeft = async () => {
-    await refreshApiData();
-    setIndex((prevIndex) => (prevIndex + 1) % apiData.animals.length);
+    
+    setIndex((prevIndex) => (prevIndex + 1) );
   };
 
   const handleCardClick = (idx) => {
@@ -116,6 +117,8 @@ const SlideControl = () => {
     }
     setButtonClicked(false); 
   };
+
+
 
   const getSentence = (text) => {
     if (text && typeof text === 'string') {
@@ -158,6 +161,7 @@ const SlideControl = () => {
                     <p>Type: {animal.type}</p>
                     <p>Breed: {animal.breeds.primary}</p>
                     <p>Age: {animal.age} </p>
+                    <p>Distance:<b> {parseInt(animal.distance)} Miles</b></p>
                   </div>
                   <div className="animal-details-back">
                     <h2>{animal.name}</h2>
@@ -170,7 +174,7 @@ const SlideControl = () => {
                     </p>
                     <p><b>Tags</b><br></br>   {animal.tags.map((tag, index) => (
                       <React.Fragment key={index}>
-                        {index > 0 && ', '}
+                        {index > 0 && ' • '}
                         <b>{tag}</b>
                       </React.Fragment>
                     ))}</p>

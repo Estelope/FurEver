@@ -90,7 +90,7 @@
   justify-content: center;
   transform: rotateY(180deg);
   border: solid transparent;
-  height: calc(600px + 6vw);
+  height: calc(640px + 6vw);
   width: calc(600px + 6vw);
   border: calc(8px + 0.2vw) solid transparent;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -99,7 +99,7 @@
 }
 
 .animal-details-back {
-  margin-left: -31%;
+  margin-left: -38%;
 }
 
 .animal-details-back h2{

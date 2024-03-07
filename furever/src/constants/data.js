@@ -2,19 +2,19 @@
 const NavBar = [
   {
     text: 'Resources',
-    link: '#resources',
+    link: 'resources',
   },
   {
     text: 'Matches',
-    link: '#matches',
+    link: 'matches',
   },
   {
-    text: 'Pet Preferences',
-    link: '#questionare',
+    text: 'Dashboard',
+    link: 'dashboard',
   },
   {
     text: 'Sign in',
-    link: '#signIn',
+    link: 'signIn',
   }
 
 ];

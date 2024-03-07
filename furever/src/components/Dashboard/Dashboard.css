@@ -1,5 +1,70 @@
+.dashboard-container {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-width: 5px;
+  padding: 10px ;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px, rgba(255, 0, 0, 0.2) 15px 15px, rgba(255, 0, 0, 0.1) 20px 20px, rgba(255, 0, 0, 0.05) 25px 25px;
+}
+
+.location-input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #333;
+}
+
+.label-container {
+  margin-bottom: 10px;
+}
+
+.location-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px; 
+}
+
+.radio-container {
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.radio-input {
+  margin-right: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-dark);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: var(--color-grey);
+}
 
 
 
 
-box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+

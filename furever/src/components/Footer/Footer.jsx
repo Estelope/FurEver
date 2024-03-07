@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="row align-items-center">
-        <div className="col-md-2 col-12">
+        <div className="col-md-2 col-12" >
           <img src={images.fureverdogcat} alt="logo" className="img-fluid" />
         </div>
         <div className="col-md-8 col-12 ">
