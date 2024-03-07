@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import './Matches.css';
 
 const MatchesComponent = ({ matchedAnimals }) => {
+
   return (
-    <div>
+    <div className='matches-container'>
       <h2>Matches</h2>
       <ul>
-        {matchedAnimals.map((animal, idx) => (
-          <li key={idx}>{animal.name}</li>
-        ))}
+        {matchedAnimals.length > 0 ? (
+          matchedAnimals.map((animal, idx) => (
+            <li key={idx}>{animal.name}</li>
+          ))
+        ) : (
+          <li>No matches yet</li>
+        )}
       </ul>
     </div>
   );

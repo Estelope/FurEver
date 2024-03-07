@@ -64,6 +64,10 @@ button:hover {
   background-color: var(--color-grey);
 }
 
+.hidden {
+  display: none;
+}
+
 
 
 
