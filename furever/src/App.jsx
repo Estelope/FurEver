@@ -12,8 +12,8 @@ import Signin from './components/Signin/Signin';
 function App() {
   return (
     <Router>
-      <Header />
       <NavBar />
+      <Header />
       
       <Routes>
         <Route path="/Dashboard" element={<Dashboard />} />

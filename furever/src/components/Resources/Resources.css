@@ -1,7 +1,6 @@
 .parent-container {
-  text-align: center; /* Add this line to center its children */
+  text-align: center;
 }
-
 
 .resources {
   background: var(--color-highlight);
@@ -10,10 +9,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
-  padding: 0 .5rem;
+  padding: 10px .5rem;
   margin-bottom: 1rem;
   display: inline-block;
-  margin: auto;
- 
-  
 }
