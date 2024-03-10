@@ -19,7 +19,8 @@ This app will aim to streamline the connection between shelters with animals up 
 * PetFinder API
 
 
-
+![basic dashboard view](furever/src/assets/dashboard.png)
+![slide](furever/src/assets/slides.png)
 
 ## Setup
 1. Clone the project from github.
@@ -37,7 +38,7 @@ REACT_APP_API_SECRET = [react-api-secret]
 
 ```
 6. If you do not have a key and secret you can obtain one at https://www.petfinder.com/developers/ by signing in.
-7. In the production directory furver Run dev server: `npm run start`
+7. In the production directory furever run the dev server: `npm run start`
 
 
 
@@ -61,7 +62,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-![basic outline component tree](./src/assets/capstonecomponenttree.png)
+![basic outline component tree](furever/src/assets/capstonecomponenttree.png)
 
 
 ### Research & Planning Log 

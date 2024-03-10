@@ -184,7 +184,7 @@ console.log(apiData)
                       setButtonClicked(true);                     
                     }}
                     >
-                      <br></br> <br></br>
+                      <br></br> 
                       <img className="heart-icon" src={images.heartborder} alt="Empty Heart" />
                     
                     </button>
