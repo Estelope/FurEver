@@ -18,9 +18,15 @@ This app will aim to streamline the connection between shelters with animals up 
 * Bootstrap
 * PetFinder API
 
+## Site images
 
 ![basic dashboard view](furever/src/assets/dashboard.png)
+*Caption: Basic Dashboard View*
+
+<br />
+
 ![slide](furever/src/assets/slides.png)
+*Caption: Animal Slide*
 
 ## Setup
 1. Clone the project from github.
@@ -62,8 +68,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+## flexible Component structure
 ![basic outline component tree](furever/src/assets/capstonecomponenttree.png)
-
+*Caption: basic component tree*
 
 ### Research & Planning Log 
 1/27/24
