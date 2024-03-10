@@ -40,27 +40,29 @@ const Dashboard = ({ onUpdatePreferences }) => {
       </div>
       <div className="radio-container">
         <p>Select Animal Type:</p>
-        <label>
+        <label className='radio-label'>
           Cat
           <input
             type="radio"
             name="animalType"
             value="cat"
-            checked={selectedAnimalType === 'cat'}
+            checked={!selectedAnimalType ||selectedAnimalType === 'cat'}
             onChange={() => handleAnimalTypeChange('cat')}
           />
+            <span className="radio-indicator"></span>
         </label>
-        <label>
+        <label className='radio-label'>
           Dog
           <input
             type="radio"
             name="animalType"
             value="dog"
-            checked={!selectedAnimalType || selectedAnimalType === 'dog'}
+            checked={selectedAnimalType === 'dog'}
             onChange={() => handleAnimalTypeChange('dog')}
           />
+            <span className="radio-indicator"></span>
         </label>
-        <label>
+        <label className='radio-label'>
           Other
           <input
             type="radio"
@@ -69,6 +71,7 @@ const Dashboard = ({ onUpdatePreferences }) => {
             checked={selectedAnimalType === 'rabbit'}
             onChange={() => handleAnimalTypeChange('rabbit')}
           />
+            <span className="radio-indicator"></span>
         </label>
       </div>
       <div>

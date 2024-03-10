@@ -7,7 +7,7 @@
   border-top-left-radius: 45px;
   border-bottom-right-radius: 45px;
   border-bottom-left-radius: 45px;
-  box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px, rgba(255, 0, 0, 0.2) 15px 15px, rgba(255, 0, 0, 0.1) 20px 20px, rgba(255, 0, 0, 0.05) 25px 25px;
+  box-shadow: #ff000066 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px, rgba(255, 0, 0, 0.2) 15px 15px, rgba(255, 0, 0, 0.1) 20px 20px, rgba(255, 0, 0, 0.05) 25px 25px;
 }
 
 .location-input {
@@ -69,6 +69,33 @@ button:hover {
 }
 
 
+/* Hide default radio button */
+input[type="radio"] {
+  display: none;
+}
 
 
+.radio-label {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff; /* Set initial background color to white */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
 
+.radio-label:hover {
+  background-color: var(--color-grey); /* Change background color on hover */
+  border-color: var(--color-grey);
+}
+
+input[type="radio"]:checked + .radio-label {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: #fff;
+}

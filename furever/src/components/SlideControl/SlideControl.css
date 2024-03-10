@@ -59,7 +59,6 @@
   height: 100%;
   opacity: 1; 
   backface-visibility: hidden;
-
 }
 
 .react-swipeable-view-container.flipped {
@@ -80,6 +79,7 @@
 }
 
 .animal-details-back {
+ 
   background-color: var(--color-dark); 
   padding: 10px;
   border-radius: 45px;
@@ -107,45 +107,8 @@
     
   }
 
-  .favorite-button {
-    transition: transform 0.3s ease; 
-    position:relative;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .heart-icon-hover {
-    display: inline-block;
-    width: 100%;  
-    height: 100%;
-    transition: opacity 0.3s ease;
-  }
-  
-  .favorite-button:hover .heart-icon {
-    display: none;
-  }
-  
-  .favorite-button:hover .heart-icon-hover {
-    display: inline-block;
-   
-  }
-  .heart-icon, .heart-icon-hover {
-    width: 400px;  
-    height: 100px;
-  }
+.animal-details-back img{
+  border-radius: 45px; 
+  width: 1500px;
+}
 
-  .favorite-button:hover img.heart-icon {
-    transform: scale(0.8) 
-   
-  }
-  
-  .favorite-button:hover img.heart-icon-hover {
-    transform: scale(1.2)  
-  }
-  .favorite-button img {
-    transition: transform 0.3s ease;
-  
-  }

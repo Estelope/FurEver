@@ -1,7 +1,7 @@
 # Furever
 
 ## Description
-This app will aim to streamline the connection between shelters with animals up for adoption and potential pet owners.It will introduce users to their dream pets and facilitate their connection to new homes with a friendly and familiar ui. 
+This app will aim to streamline the connection between shelters with animals up for adoption and potential pet owners.It will introduce users to their dream pets and facilitate their connection to new homes with a friendly and familiar ui. Bootstrapped with npm-create-react-app.
 
 ## Technologies Used
 
@@ -16,14 +16,29 @@ This app will aim to streamline the connection between shelters with animals up 
 * React
 * React Router library
 * Bootstrap
+* PetFinder API
 
 
 
-## Setup/Installation Requirements
+
+## Setup
 1. Clone the project from github.
-2. Navigate to project directory in the terminal:  `cd Furever`
+2. Navigate to project assembly directory in the terminal:  `cd furever` 
 3. Install the project dependencies as needed: `npm install`
-4. Run dev server: `npm run start`
+4. Within the production directory create a new file called `EnvironmentVariables.cs`. or `.env`
+5.  Within the .env file put in the following code, replacing the `[REACT-API-KEY]` with your own API key. 
+
+
+```.env file:
+
+REACT_APP_API_KEY = [react-api-key]
+
+REACT_APP_API_SECRET = [react-api-secret]
+
+```
+6. If you do not have a key and secret you can obtain one at https://www.petfinder.com/developers/ by signing in.
+7. In the production directory furver Run dev server: `npm run start`
+
 
 
 ## Available Scripts
@@ -45,6 +60,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+![basic outline component tree](./src/assets/capstonecomponenttree.png)
 
 
 ### Research & Planning Log 
@@ -74,5 +91,5 @@ Your app is ready to be deployed!
 * email the host if there are re-occuring issues or any questions
 
 ## licensing info 
-*Copyright (c) 1/27/24 Estevan Lopez
+*Copyright (c) 3/10/24 Estevan Lopez
 *MIT license 

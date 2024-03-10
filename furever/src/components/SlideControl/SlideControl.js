@@ -42,7 +42,7 @@ const SlideControl = ({animalType, location}) => {
   };
 
   useEffect(() => {
-
+console.log(apiData)
     const fetchInitialData = async () => {
       const token = await getAccessToken();
 
@@ -97,7 +97,6 @@ const SlideControl = ({animalType, location}) => {
   const handleSwipe = (index) => {
     setIndex(index);
     console.log(apiData)
-
   };
 
   const handleSwipeRight = () => {
@@ -140,7 +139,7 @@ const SlideControl = ({animalType, location}) => {
           onSwipeLeft={handleSwipeLeft}
         >
           {apiData.animals
-            .filter((animal) => animal.photos && animal.photos.length > 0)
+              .filter((animal) => animal.photos && animal.photos.length > 0)
             .map((animal, idx) => (
               <div key={idx} className={`react-swipeable-view-container ${flippedIndex === idx ? 'flipped' : ''}`}
                 onClick={() => handleCardClick(idx)}>
@@ -185,8 +184,9 @@ const SlideControl = ({animalType, location}) => {
                       setButtonClicked(true);                     
                     }}
                     >
+                      <br></br> <br></br>
                       <img className="heart-icon" src={images.heartborder} alt="Empty Heart" />
-                      <img className="heart-icon-hover" src={images.symboloflove} alt="Filled Heart" />
+                    
                     </button>
 
                   </div>
