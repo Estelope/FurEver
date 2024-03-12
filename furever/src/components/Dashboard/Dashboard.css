@@ -82,15 +82,17 @@ input[type="radio"] {
   cursor: pointer;
   font-size: 16px;
   color: #333;
-  background-color: #fff; /* Set initial background color to white */
+  background-color: #fff; 
   border: 1px solid #ccc;
   border-radius: 20px;
   margin-bottom: 10px;
   transition: background-color 0.3s, border-color 0.3s;
+  padding: 30px; 
+
 }
 
 .radio-label:hover {
-  background-color: var(--color-grey); /* Change background color on hover */
+  background-color: var(--color-grey);
   border-color: var(--color-grey);
 }
 

@@ -7,6 +7,7 @@ This app will aim to streamline the connection between shelters with animals up 
 
 * Node Package Manager 
 * webpack
+* capacitor.js for mobile
 * Jest
 * ESlint
 * dotenv
@@ -17,16 +18,19 @@ This app will aim to streamline the connection between shelters with animals up 
 * React Router library
 * Bootstrap
 * PetFinder API
+* Xcode, Xcode CL tools
+* Homebrew
+* Cocoapods
 
 ## Site images
 
 ![basic dashboard view](furever/src/assets/dashboard.png)
-*Caption: Basic Dashboard View*
+*Basic Dashboard View*
 
 <br />
 
 ![slide](furever/src/assets/slides.png)
-*Caption: Animal Slide*
+*Animal Slide*
 
 ## Setup
 1. Clone the project from github.
@@ -70,7 +74,7 @@ Your app is ready to be deployed!
 
 ## flexible Component structure
 ![basic outline component tree](furever/src/assets/capstonecomponenttree.png)
-*Caption: basic component tree*
+*Basic component tree*
 
 ### Research & Planning Log 
 1/27/24
